@@ -15,7 +15,7 @@ Compose your async functions with elegance.
 With `bach`, it is very easy to compose async functions to run in series or parallel.
 
 ```js
-var bach = require('bach');
+var bach = require("bach");
 
 function fn1(cb) {
   cb(null, 1);
@@ -71,18 +71,18 @@ Functions are called with [async-done], so you can return a stream, promise, obs
 
 ```js
 // streams
-var fs = require('fs');
+var fs = require("fs");
 
 function streamFn1() {
   return fs
-    .createReadStream('./example')
-    .pipe(fs.createWriteStream('./example'));
+    .createReadStream("./example")
+    .pipe(fs.createWriteStream("./example"));
 }
 
 function streamFn2() {
   return fs
-    .createReadStream('./example')
-    .pipe(fs.createWriteStream('./example'));
+    .createReadStream("./example")
+    .pipe(fs.createWriteStream("./example"));
 }
 
 var parallelStreams = bach.parallel(streamFn1, streamFn2);
@@ -126,7 +126,7 @@ function success(cb) {
 }
 
 function error() {
-  throw new Error('Thrown Error');
+  throw new Error("Thrown Error");
 }
 
 var errorThrownFn = bach.parallel(error, success);
@@ -151,7 +151,7 @@ function success(cb) {
 }
 
 function error(cb) {
-  cb(new Error('Async Error'));
+  cb(new Error("Async Error"));
 }
 
 var parallelSettlingFn = bach.settleParallel(success, error);
