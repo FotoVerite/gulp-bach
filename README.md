@@ -238,6 +238,16 @@ Called immediately after each function call with the `result` of the function an
 
 Called immediately after a failed function call with the `error` of the function and the `storage` value returned from the `create` extension point.
 
+## Strict No LLM / No AI Policy
+
+No LLMs for issues.
+
+No LLMs for patches / pull requests.
+
+No LLMs for comments on the bug tracker, including translation.
+
+English is encouraged, but not required. You are welcome to post in your native language and rely on others to have their own translation tools of choice to interpret your words.
+
 ## License
 
 MIT
@@ -247,15 +257,9 @@ MIT
 [npm-url]: https://www.npmjs.com/package/bach
 [npm-image]: https://img.shields.io/npm/v/bach.svg?style=flat-square
 
-[ci-url]: https://github.com/gulpjs/bach/actions?query=workflow:dev
-[ci-image]: https://img.shields.io/github/actions/workflow/status/gulpjs/bach/dev.yml?branch=master&style=flat-square
+[ci-url]: https://github.com/gulpjs/bach/actions/workflows/dev.yml
+[ci-image]: https://img.shields.io/github/actions/workflow/status/gulpjs/bach/dev.yml?style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/gulpjs/bach
-[coveralls-image]: https://img.shields.io/coveralls/gulpjs/bach.svg?style=flat-square
-<!-- prettier-ignore-end -->
-
-<!-- prettier-ignore-start -->
-[domain]: https://nodejs.org/api/domain.html
-[async-done]: https://github.com/gulpjs/async-done
-[completions]: https://github.com/gulpjs/async-done#completion-and-error-resolution
+[coveralls-image]: https://img.shields.io/coveralls/gulpjs/bach/main.svg?style=flat-square
 <!-- prettier-ignore-end -->
