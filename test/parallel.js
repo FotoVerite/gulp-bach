@@ -47,7 +47,7 @@ describe("parallel", function () {
   it("should execute functions in parallel, passing error", function (t, done) {
     function slowFn(cb) {
       setTimeout(function () {
-        cb(null, 2)
+        cb(null, 2);
       }, 500);
     }
     bach.parallel(
