@@ -45,7 +45,7 @@ describe("parallel", function () {
   });
 
   it("should execute functions in parallel, passing error", function (t, done) {
-    function slowFn() {
+    function slowFn(cb) {
       setTimeout(function () {
         cb(null, 2)
       }, 500);
