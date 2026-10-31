@@ -45,9 +45,9 @@ describe("series", function () {
   });
 
   it("should execute functions in series, passing error", function (t, done) {
-    function slowFn(done) {
+    function slowFn(cb) {
       setTimeout(function () {
-        done(null, 2);
+        cb(null, 2);
       }, 500);
     }
     bach.series(

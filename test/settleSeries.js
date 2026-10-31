@@ -45,9 +45,9 @@ describe("settleSeries", function () {
   });
 
   it("should execute functions in series, passing settled errors and results", function (t, done) {
-    function slowFn(done) {
+    function slowFn(cb) {
       setTimeout(function () {
-        done(null, 2);
+        cb(null, 2);
       }, 500);
     }
     bach.settleSeries(

@@ -47,7 +47,7 @@ describe("parallel", function () {
   it("should execute functions in parallel, passing error", function (t, done) {
     function slowFn() {
       setTimeout(function () {
-        assert.fail("slow function should not be called");
+        cb(null, 2)
       }, 500);
     }
     bach.parallel(

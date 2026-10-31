@@ -45,9 +45,9 @@ describe("settleParallel", function () {
   });
 
   it("should execute functions in parallel, passing settled errors and results", function (t, done) {
-    function slowFn(done) {
+    function slowFn(cb) {
       setTimeout(function () {
-        done(null, 2);
+        cb(null, 2);
       }, 500);
     }
     bach.settleParallel(
